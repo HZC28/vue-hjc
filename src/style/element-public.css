@@ -1,0 +1,11 @@
+.el-table .el-table__body-wrapper .el-table__row:nth-child(2n) {
+  background: #d4effa;
+}
+.el-table .el-table__body-wrapper .el-table__row:nth-child(2n-1) {
+  background: #c6cbcf;
+}
+.el-table th,
+.el-table tr {
+  background: #af7c7c;
+  color: #000;
+}

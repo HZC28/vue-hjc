@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <div>
+            {{msg}}
+            <br>
+            出现的次数：{{count}}
+        </div>
+        <button>统计数量</button>
+    </div>
+</template>
+<script>
+export default({
+    data(){
+        return{
+            type:1,
+            msg:'我是子组件A',
+            count:1
+        }
+    },
+    created(){
+        console.log(123)
+    },
+    props:{
+        number:{
+            type:Number,
+            default: 1
+        }
+    },
+    computed:{
+        allCount:function(){
+            return this.count++
+        }
+    },
+    watch:{
+        count:'changeCount'
+    },
+    methods:{
+        changeCount(val,old){
+            console.log(val,old)
+            console.log('打印父实例',this.$parent.num)
+        }
+    }
+})
+</script>

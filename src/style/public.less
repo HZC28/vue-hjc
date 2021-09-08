@@ -1,0 +1,5 @@
+@defaultpx:750px;
+.gethw(@px,@width:@defaultpx){
+    @ff:unit(@px/@width)*100;
+    @hw:~"@{ff}vw"
+}
