@@ -10,7 +10,7 @@ const router=new Router({
   routes: [
     {
       path: '/',
-      redirect:'/echar'
+      redirect:'/mock'
     },
     
     {
@@ -42,6 +42,15 @@ const router=new Router({
       component: ()=>{return import('@/view/myslot.vue')},
       meta: {
         title: '插槽',
+        keepAlive: false, // 需要被缓存
+      }
+    },
+    {
+      path: '/mock',
+      name: 'mock',
+      component: ()=>{return import('@/view/mock.vue')},
+      meta: {
+        title: 'mock',
         keepAlive: false, // 需要被缓存
       }
     },
