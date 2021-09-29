@@ -12,7 +12,8 @@ import 'vant/lib/index.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './style/element-public.css'
-import axios from 'axios'
+import axios from './require/index.js'
+// axios.defaults.baseURL = process.env.API_ROOT+":3000"
 import * as echarts from 'echarts';
 Vue.use(ElementUI);
 Vue.prototype.$http= axios

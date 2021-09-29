@@ -14,6 +14,13 @@ module.exports = {
           '^/api': '/'
         }
       },
+      '/express': {
+        target: 'http://192.168.1.99:3000',//设置你调用的接口域名和端口号 别忘了加http
+        changeOrigin: true,//如果需要跨域
+        pathRewrite: {
+          '^/express': '/'
+        }
+      },
       '/csdn': {
         target: 'https://blog.csdn.net/',//设置你调用的接口域名和端口号 别忘了加http
         changeOrigin: true,//如果需要跨域

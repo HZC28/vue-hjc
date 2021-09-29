@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import index from '@/view/index.vue'
 import transform from '@/view/transform'
-
+import user_router from './test/test_router'
+// import 
 Vue.use(Router)
 const router=new Router({
   mode: 'history',
@@ -71,7 +72,8 @@ const router=new Router({
         title: 'echarts图表',
         keepAlive: false, // 需要被缓存
       }
-    }
+    },
+    ...user_router
   ]
 })
 export default router
